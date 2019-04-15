@@ -9,7 +9,7 @@ class ItcastSpider(scrapy.Spider):
     start_urls = ['http://www.itcast.cn/']
 
     def parse(self, response):
-        print("这是一个爬虫的开始,for branch1")
+        print("这是一个爬虫的开始,合并分支1到master")
         item = ScrjamItem()
         item['title'] = response.xpath('/html/head/title/text()').extract()
         item['link'] = response.xpath('/html/body/div[1]/div[2]/div[1]/div[2]/ul/li[2]/a/@href').extract()
